@@ -98,4 +98,4 @@ docker-compose down
 
 ## 4. 授權
 
-本專案採用 [MIT License](LICENSE) 授權。
+本專案採用 [GNU General Public License v2.0](LICENSE) 授權。詳情請參閱 [LICENSE](LICENSE) 檔案。
