@@ -1,0 +1,26 @@
+
+version: '3.8'
+
+services:
+  documon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - .env
+    # 如果你的 Next.js 應用程式需要環境變數，可以在這裡添加
+    # env_file:
+    #   - .env.local # 或者 .env
+
+  sqliteweb:
+    image: tomdesinto/sqliteweb
+    ports:
+      - "3001:8080"
+    volumes:
+      - ./documon_annotation_database.db:/db/my_database.db
+    command: my_database.db
