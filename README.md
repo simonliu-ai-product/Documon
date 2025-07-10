@@ -11,6 +11,18 @@ Documon - Your AI-Powered Document Annotation &amp; Evaluation Assistant
 *   **手動編輯與確認**: 您可以對 AI 生成的結果進行編輯、確認，並將其加入到您的標註資料中。
 *   **資料匯出**: 將確認後的標註資料匯出為 CSV 格式，方便後續使用。
 
+### 截圖
+
+![screencapture-2025-07-10-13_53_52.png](./static/screencapture-2025-07-10-13_53_52.png)
+![screencapture-2025-07-10-13_47_44.png](./static/screencapture-2025-07-10-13_47_44.png)
+![screencapture-2025-07-10-13_55_15.png](./static/screencapture-2025-07-10-13_55_15.png)
+![screencapture-2025-07-10-13_51_31.png](./static/screencapture-2025-07-10-13_51_31.png)
+![screencapture-2025-07-10-13_55_39.png](./static/screencapture-2025-07-10-13_55_39.png)
+![screencapture-2025-07-10-13_56_10.png](./static/screencapture-2025-07-10-13_56_10.png)
+![screencapture-2025-07-10-13_56_18.png](./static/screencapture-2025-07-10-13_56_18.png)
+![screencapture-2025-07-10-13_56_54.png](./static/screencapture-2025-07-10-13_56_54.png)
+![screencapture-2025-07-10-13_57_06.png](./static/screencapture-2025-07-10-13_57_06.png)
+
 ## 技術棧
 
 *   **前端**: [Next.js](https://nextjs.org/) (with [React](https://react.dev/) and [TypeScript](https://www.typescriptlang.org/))
@@ -22,60 +34,14 @@ Documon - Your AI-Powered Document Annotation &amp; Evaluation Assistant
 
 ## 如何開始
 
-### 1. 安裝依賴
-
-```bash
-npm install
-```
-
-### 2. 執行開發伺服器
-
-```bash
-npm run dev
-```
-
-然後在瀏覽器中打開 `http://localhost:9002`。
-
-### 3. 執行正式環境
-
-首先，建立正式版本的應用程式：
-
-```bash
-npm run build
-```
-
-然後，啟動正式伺服器：
-
-```bash
-npm run start
-```
-
-### 4. 使用 Docker
-
-您也可以使用 Docker 來建立並執行應用程式。
-
-首先，建立 Docker 映像檔：
-
-```bash
-docker build -t documon .
-```
-
-然後，執行 Docker 容器：
-
-```bash
-docker run -p 3000:3000 documon
-```
-
-這將會在 `http://localhost:3000` 啟動應用程式。
-
-#### 使用 Docker Compose
+### 使用 Docker Compose
 
 如果您想使用 Docker Compose 來管理多個服務（例如，應用程式和資料庫管理工具），請確保您已經創建了 `docker-compose.yaml` 文件。
 
-啟動所有服務（在後台運行）：
+啟動所有服務（在後台運行並重建映像檔）：
 
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 這將啟動 Documon 應用程式（通常在 `http://localhost:3000`）和 `sqliteweb` 服務（通常在 `http://localhost:3001`）。
